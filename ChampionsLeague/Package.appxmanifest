@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="02bbe353-6ea3-40e1-8728-4fbe6f475164" Publisher="CN=Koen" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>ChampionsLeague</DisplayName>
+    <PublisherDisplayName>Koen</PublisherDisplayName>
+    <Logo>Assets\StoreLogoUEFA.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ChampionsLeague.App">
+      <m2:VisualElements DisplayName="ChampionsLeague" Square150x150Logo="Assets\LogoUEFA.png" Square30x30Logo="Assets\SmallLogoUEFA.png" Description="ChampionsLeague" ForegroundText="light" BackgroundColor="#FFFFFF">
+        <m2:SplashScreen Image="Assets\SplashScreenUEFA.png" BackgroundColor="#000000" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

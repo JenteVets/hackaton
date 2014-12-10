@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="ChampionsLeague.GroupedPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ChampionsLeague"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <DataTemplate x:Key="templatePloeg">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Logo}" Width="70" Height="70"
+                       Margin="10,10,0,10"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="{Binding Naam}" FontSize="30" 
+                           TextWrapping="Wrap" VerticalAlignment="Center" 
+                           Width="350"
+                           Margin="10,0,0,0"/>
+                    <TextBlock Text="{Binding Land}" FontSize="20" 
+                           TextWrapping="Wrap" VerticalAlignment="Center" 
+                           Margin="10,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <GridView VerticalAlignment="Center" HorizontalAlignment="Center"
+                x:Name="gridViewPloegen"
+                ItemTemplate="{StaticResource templatePloeg}"
+                BorderBrush="White" BorderThickness="1"
+                ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                SelectionMode="Single"
+                Width="800" Height="490">
+            <GridView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Groep}" 
+                                       Foreground="White" FontSize="40" 
+                                       FontStyle="Oblique" Margin="5,5,0,10" />
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </GridView.GroupStyle>
+        </GridView>
+    </Grid>
+    
+</Page>
