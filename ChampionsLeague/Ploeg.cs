@@ -24,6 +24,7 @@ namespace ChampionsLeague
 
         public string Naam
         {
+            //test test
             get { return naam; }
             set
             {
